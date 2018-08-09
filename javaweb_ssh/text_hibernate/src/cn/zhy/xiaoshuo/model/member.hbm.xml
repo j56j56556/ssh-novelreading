@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping-3.0.dtd 
+PUBLIC "hibernate-mapping-3.0.dtd" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.zhy.xiaoshuo.model">
+	<class name="Member" table="member">
+		<id name="member_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="name"></property>
+		<property name="sex" column="sex"></property>
+		<property name="password" column="password"></property>
+		<property name="mail" column="mail"></property>
+		<property name="money" column="money"></property>
+		<property name="vip" column="vip" type="int"></property>
+	</class>
+</hibernate-mapping>

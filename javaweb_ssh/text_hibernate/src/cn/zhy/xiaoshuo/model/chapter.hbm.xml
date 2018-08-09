@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.zhy.xiaoshuo.model">
+	<class name="Chapter" table="chapter">
+		<id name="chapter_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="chapternum" column="chapternum"></property>
+		<property name="name" column="name"></property>
+		<property name="content" column="content" length="20000"></property>
+		<many-to-one name="novel" column="novel_id" class="Novel"></many-to-one>
+	</class>
+</hibernate-mapping>
