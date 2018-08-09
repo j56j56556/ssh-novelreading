@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "struts-2.3.dtd" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package namespace="/houtai" name="managesave" extends="struts-default">
+		<action name="managersave" class="cn.zhy.xiaoshuo.contral.Managesavecontral"
+			method="managersave">
+			<result name="success">/index.jsp</result>
+		</action>
+
+	</package>
+
+	<package namespace="/xiaoshuo" name="q" extends="struts-default">
+		<action name="login" class="cn.zhy.xiaoshuo.contral.Loginctrl"
+			method="checklogin">
+			<result name="empty">/mainfold/login.jsp</result>
+			<result name="success">/xiaoshuo.jsp</result>
+			<result name="error">/mainfold/login.jsp</result>
+			<!-- <result name="error" type="json"> <param name="root">j1</param> </result> -->
+		</action>
+		<action name="zhuye" class="cn.zhy.xiaoshuo.contral.Zhuyectrl"
+			method="novels">
+			<result name="success">/xiaoshuo.jsp</result>
+		</action>
+		<action name="read/*" class="cn.zhy.xiaoshuo.contral.Chapterctrl"
+			method="{1}">
+			<result name="readallchapter">/mainfold/readchapter.jsp</result>
+			<result name="readchapter">/mainfold/Readcontent.jsp</result>
+			<result name="nextchapter">/mainfold/Readcontent.jsp</result>
+		</action>
+
+	</package>
+</struts>
+

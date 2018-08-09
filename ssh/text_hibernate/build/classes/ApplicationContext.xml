@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans-4.2.xsd ">
+	<bean name="novel" class="cn.zhy.xiaoshuo.model.Novel">
+		<property name="name" value="三国演义"></property>
+	</bean>
+	<bean name="loginservice" class="cn.zhy.xiaoshuo.service.Login">
+	</bean>
+</beans>
+
+
+
+		
